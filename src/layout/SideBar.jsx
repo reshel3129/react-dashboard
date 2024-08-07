@@ -13,8 +13,6 @@ import PowerSettingsNewOutlinedIcon from '@mui/icons-material/PowerSettingsNewOu
 export default function SideBar() {
     return (
         <Paper square sx={{ width: "65px", backgroundColor: "#202028" }}>
-            <Box sx={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
-
             <List component="nav">
                 <ListItemButton sx={{ marginBottom: "20px" }}>
                     <ListItemIcon>
@@ -46,16 +44,13 @@ export default function SideBar() {
                     <ListItemIcon>
                             <LocalMallOutlinedIcon sx={{ color: "#FFFFFF" }} />
                         </ListItemIcon>
-                    </ListItemButton>
-                    <Box sx={{ flexGrow: 1 }} />  {/* Spacer */}
-
+                </ListItemButton>
                     <ListItemButton sx={{ marginBottom: "15px" }}>
                         <ListItemIcon>
                             <PowerSettingsNewOutlinedIcon sx={{ color: "#FFFFFF" }} />
                     </ListItemIcon>
                 </ListItemButton>
             </List>
-            </Box>
         </Paper>
     )
 }
