@@ -29,7 +29,9 @@ export default function RecentOrders() {
       <CardHeader title={<Typography sx={{ fontWeight: "800" }} component="div" variant="h5">
         Recent Orders        </Typography>} />
 
-      <TableContainer>
+      <TableContainer component={Paper} sx={{
+        backgroundColor: "#202028", overflowX: "auto"
+      }}>
         <Table aria-label="simple table" >
           <TableHead >
             <TableRow >
