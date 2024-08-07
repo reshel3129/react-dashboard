@@ -120,10 +120,10 @@ export default function Header() {
       onClose={handleMobileMenuClose}
     >
       <MenuItem>
-        <IconButton size="large" color="inherit">
-          <Avatar sx={{ backgroundColor: "#444549" }}>
+        <IconButton size="small" color="inherit">
+          <Badge >
             <MailOutlinedIcon />
-          </Avatar>
+          </Badge>
         </IconButton>
         <p>Messages</p>
       </MenuItem>
@@ -147,11 +147,11 @@ export default function Header() {
             <SettingsOutlinedIcon />
           </Badge>
         </IconButton>
-        <p>Notifications</p>
+        <p>Settings</p>
       </MenuItem>
       <MenuItem onClick={handleProfileMenuOpen}>
         <IconButton
-          size="large"
+          size="small"
           aria-label="account of current user"
           aria-controls="primary-search-account-menu"
           aria-haspopup="true"

@@ -30,6 +30,7 @@ export default function RecentOrders() {
         Recent Orders        </Typography>} />
 
       <TableContainer component={Paper} sx={{
+        // minWidth: 50,
         backgroundColor: "#202028", overflowX: "auto"
       }}>
         <Table aria-label="simple table" >
