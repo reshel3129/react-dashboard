@@ -9,13 +9,13 @@ import InputBase from '@mui/material/InputBase';
 import Badge from '@mui/material/Badge';
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
-import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 import AccountCircle from '@mui/icons-material/AccountCircle';
-import MailIcon from '@mui/icons-material/Mail';
+import MailOutlinedIcon from '@mui/icons-material/MailOutlined';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import MoreIcon from '@mui/icons-material/MoreVert';
-
+import { Avatar } from '@mui/material';
+import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
   borderRadius: theme.shape.borderRadius,
@@ -120,21 +120,31 @@ export default function Header() {
       onClose={handleMobileMenuClose}
     >
       <MenuItem>
-        <IconButton size="large" aria-label="show 4 new mails" color="inherit">
-          <Badge badgeContent={4} color="error">
-            <MailIcon />
-          </Badge>
+        <IconButton size="large" color="inherit">
+          <Avatar sx={{ backgroundColor: "#444549" }}>
+            <MailOutlinedIcon />
+          </Avatar>
         </IconButton>
         <p>Messages</p>
       </MenuItem>
       <MenuItem>
         <IconButton
-          size="large"
-          aria-label="show 17 new notifications"
+          size="small"
           color="inherit"
         >
-          <Badge badgeContent={17} color="error">
+          <Badge color="error">
             <NotificationsIcon />
+          </Badge>
+        </IconButton>
+        <p>Notifications</p>
+      </MenuItem>
+      <MenuItem>
+        <IconButton
+          size="small"
+          color="inherit"
+        >
+          <Badge color="error">
+            <SettingsOutlinedIcon />
           </Badge>
         </IconButton>
         <p>Notifications</p>
@@ -179,22 +189,27 @@ export default function Header() {
           </Search>
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-            <IconButton size="large" aria-label="show 4 new mails" color="inherit">
-              <Badge badgeContent={4} color="error">
-                <MailIcon />
-              </Badge>
+            <IconButton size='small'>
+              <Avatar sx={{ bgcolor: "#46474C", height: 30, width: 30 }}>
+                <MailOutlinedIcon sx={{ fontSize: "15px" }} />
+              </Avatar>
             </IconButton>
             <IconButton
-              size="large"
-              aria-label="show 17 new notifications"
-              color="inherit"
+              size="small"
             >
-              <Badge badgeContent={17} color="error">
-                <NotificationsIcon />
-              </Badge>
+              <Avatar sx={{ bgcolor: "#46474C", height: 30, width: 30 }}>
+                <SettingsOutlinedIcon sx={{ fontSize: "15px" }} />
+              </Avatar>
             </IconButton>
             <IconButton
-              size="large"
+              size="small"
+            >
+              <Avatar sx={{ bgcolor: "#46474C", height: 30, width: 30 }}>
+                <NotificationsIcon sx={{ fontSize: "15px" }} />
+              </Avatar>
+            </IconButton>
+            <IconButton
+              size="small"
               edge="end"
               aria-label="account of current user"
               aria-controls={menuId}
@@ -202,7 +217,7 @@ export default function Header() {
               onClick={handleProfileMenuOpen}
               color="inherit"
             >
-              <AccountCircle />
+              <AccountCircle sx={{ fontSize: "30px" }} />
             </IconButton>
           </Box>
           <Box sx={{ display: { xs: 'flex', md: 'none' } }}>

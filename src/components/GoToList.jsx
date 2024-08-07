@@ -9,15 +9,15 @@ import { MyCard } from "./MyCard";
 
 export function GoToList() {
   const avatarSX = {
-    width: 36,
-    height: 36,
+    width: 50,
+    height: 50,
     fontSize: '1rem'
   };
 
   const goToSX = {
     width: 26,
     height: 26,
-    fontSize: '1rem'
+    fontSize: '1rem',
   }
   // action style
   const actionSX = {
@@ -37,19 +37,19 @@ export function GoToList() {
           py: 0,
           '& .MuiListItemButton-root': {
             py: 1.5,
-            '& .MuiAvatar-root': avatarSX,
+            // '& .MuiAvatar-root': avatarSX,
             '& .MuiListItemSecondaryAction-root': { ...actionSX, position: 'relative' }
           }
         }}
       >
-        <ListItemButton sx={{ alignContent: "center", marginY: 2 }} >
+        <ListItemButton sx={{ alignContent: "center", marginY: 1 }} >
           <ListItemAvatar>
             <Avatar sx={{ ...avatarSX, bgcolor: '#5F3237', color: '#F44336' }}>
               <TrackChangesSharpIcon />
             </Avatar>
           </ListItemAvatar>
-          <ListItemText primary={<Typography variant="subtitle1">Goals</Typography>} />
-          <ListItemSecondaryAction>
+          <ListItemText primary={<Typography variant="subtitle1"> Goals</Typography>} />
+          <ListItemSecondaryAction >
             <Avatar sx={{ ...goToSX, bgcolor: '#47484D' }}>
               <KeyboardArrowRightIcon />
             </Avatar>
@@ -61,7 +61,7 @@ export function GoToList() {
               <LunchDiningIcon />
             </Avatar>
           </ListItemAvatar>
-          <ListItemText primary={<Typography variant="subtitle1">Popular Dishes</Typography>} />
+          <ListItemText primary={<Typography variant="subtitle1"> Popular Dishes</Typography>} />
           <ListItemSecondaryAction>
             <Avatar sx={{ ...goToSX, bgcolor: '#47484D' }}>
               <KeyboardArrowRightIcon />
@@ -74,7 +74,7 @@ export function GoToList() {
               <MenuBookOutlined />
             </Avatar>
           </ListItemAvatar>
-          <ListItemText primary={<Typography variant="subtitle1">Menus</Typography>} />
+          <ListItemText primary={<Typography variant="subtitle1"> Menus</Typography>} />
           <ListItemSecondaryAction>
             <Avatar sx={{ ...goToSX, bgcolor: '#47484D' }}>
               <KeyboardArrowRightIcon />

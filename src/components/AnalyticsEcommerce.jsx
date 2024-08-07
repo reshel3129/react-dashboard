@@ -12,15 +12,23 @@ import MainCard from './MainCard';
 import { MyCard } from './MyCard';
 import { Avatar } from '@mui/material';
 import LocalMallIcon from '@mui/icons-material/LocalMall';
+import CurrencyExchangeOutlinedIcon from '@mui/icons-material/CurrencyExchangeOutlined';
 import { Padding } from '@mui/icons-material';
+import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 const iconSX = { fontSize: '1rem', color: 'inherit', marginLeft: 0, marginRight: 0 };
+const iconMap = {
+    LocalMallIcon: LocalMallIcon,
+    CurrencyExchangeOutlinedIcon: CurrencyExchangeOutlinedIcon,
+    ShoppingCartOutlinedIcon: ShoppingCartOutlinedIcon
+};
+export default function AnalyticEcommerce({ color = 'primary', title, count, percentage, isLoss, icon, iconColor, iconBg }) {
+    const IconComponent = iconMap[icon]; // Get the icon component based on the icon prop
 
-export default function AnalyticEcommerce({ color = 'primary', title, count, percentage, isLoss, extra }) {
     return (
         <MyCard contentSX={{ Padding: "10px", height: "140px" }}>
             <Stack>
-                <Avatar sx={{ bgcolor: "#293269", borderRadius: "10px", paddingBottom: "5px" }} variant="rounded">
-                    <LocalMallIcon sx={{ color: "#4063F3" }} />
+                <Avatar sx={{ bgcolor: iconBg, borderRadius: "10px", paddingBottom: "5px" }} variant="rounded">
+                    {IconComponent && <IconComponent sx={{ color: iconColor }} />}
                 </Avatar>
                 <Typography variant="h6" sx={{ fontSize: "14px" }}>
                     {title}

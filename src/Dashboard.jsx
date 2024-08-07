@@ -10,7 +10,6 @@ import { MyCard } from "./components/MyCard";
 import ArrowDropUpIcon from '@mui/icons-material/ArrowDropUp';
 import { BloodtypeRounded } from "@mui/icons-material";
 import CustomizedMenus from "./components/SelectMenu";
-
 export default function Dashboard() {
     return (
         <DashboardLayout>
@@ -21,13 +20,13 @@ export default function Dashboard() {
                 </Grid>
                 <Grid item container xs={12} sm={8} spacing={4} sx={{ paddingRight: "20px" }}>
                     {[
-                        { title: 'Total Orders', count: 75, percentage: 3, isLoss: "No" },
-                        { title: 'Total Delivered', count: 70, percentage: 3, isLoss: "Yes" },
-                        { title: 'Total Cancelled', count: "05", percentage: 3, isLoss: "No" },
-                        { title: 'Total Revenue', count: "$12k", percentage: 3, isLoss: "Yes" }
+                        { title: 'Total Orders', count: 75, percentage: 3, isLoss: "No", iconColor: "#4063F3", iconBg: "#293269", icon: "ShoppingCartOutlinedIcon" },
+                        { title: 'Total Delivered', count: 70, percentage: 3, isLoss: "Yes", iconColor: "#00CA8A", iconBg: "#165246", icon: "LocalMallIcon" },
+                        { title: 'Total Cancelled', count: "05", percentage: 3, isLoss: "No", iconColor: "#F0605F", iconBg: "#5F3237", icon: "LocalMallIcon" },
+                        { title: 'Total Revenue', count: "$12k", percentage: 3, isLoss: "Yes", iconColor: "#E241A1", iconBg: "#5A264A", icon: "CurrencyExchangeOutlinedIcon" }
                     ].map((item) => (
                         <Grid key={'card_' + item?.title} item xs={6} sm={3} >
-                            <AnalyticEcommerce title={item.title} count={item.count} percentage={item.percentage} isLoss={item.isLoss} />
+                            <AnalyticEcommerce title={item.title} count={item.count} percentage={item.percentage} isLoss={item.isLoss} icon={item.icon} iconColor={item.iconColor} iconBg={item.iconBg} />
                         </Grid>
                     ))}
 
