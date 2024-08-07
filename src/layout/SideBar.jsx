@@ -12,7 +12,7 @@ import PixOutlinedIcon from '@mui/icons-material/PixOutlined';
 import PowerSettingsNewOutlinedIcon from '@mui/icons-material/PowerSettingsNewOutlined';
 export default function SideBar() {
     return (
-        <Paper square sx={{ width: "65px", backgroundColor: "#202028" }}>
+        <Paper square sx={{ width: "65px", backgroundColor: "#202028", display: "flex", flexDirection: "column", justifyContent: "space-between", height: "100vh" }}>
             <List component="nav">
                 <ListItemButton sx={{ marginBottom: "20px" }}>
                     <ListItemIcon>
@@ -45,7 +45,10 @@ export default function SideBar() {
                             <LocalMallOutlinedIcon sx={{ color: "#FFFFFF" }} />
                         </ListItemIcon>
                 </ListItemButton>
-                    <ListItemButton sx={{ marginBottom: "15px" }}>
+
+            </List>
+            <List component="nav">
+                <ListItemButton sx={{ marginBottom: "15px" }}>
                         <ListItemIcon>
                             <PowerSettingsNewOutlinedIcon sx={{ color: "#FFFFFF" }} />
                     </ListItemIcon>

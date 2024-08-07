@@ -38,7 +38,7 @@ export default function Dashboard() {
                                 <Typography variant="" component="div" sx={{ fontSize: "12px", paddingBottom: "20px" }}>
                                     Net Profit
                                 </Typography>
-                                <Typography component="div" variant="h4" sx={{ fontWeight: "900", paddingBottom: "4px" }}>
+                                <Typography component="div" variant="h4" sx={{ fontWeight: "900", paddingBottom: "4px", fontSize: { xs: "27px", sm: "32px" } }} >
                                     $ 6759.25
                                 </Typography>
                                 <Typography style={{ display: 'flex', alignItems: 'center', color: "#5DD64B" }}>
