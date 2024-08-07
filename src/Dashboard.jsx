@@ -69,7 +69,7 @@ export default function Dashboard() {
                     <GoToList />
                 </Grid>
                 <Grid item container xs={12} sm={8}>
-                    <RecentOrders />
+                    {/* <RecentOrders /> */}
 
                 </Grid>
                 <Grid item container xs={12} sm={4} md={4}>

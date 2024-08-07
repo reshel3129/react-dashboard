@@ -55,8 +55,8 @@ export function ActivityBarChart() {
 
     return (
         <Box sx={{ borderRadius: '8px' }}>
-            {/* <Bar data={data} options={options} height={80}
-            /> */}
+            <Bar data={data} options={options} height={80}
+            />
         </Box>
     );
 }
