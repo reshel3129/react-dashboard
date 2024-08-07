@@ -178,7 +178,7 @@ export default function Header() {
             <MenuIcon />
           </IconButton> */}
 
-          <Search sx={{ backgroundColor: "2A2B30" }}>
+          <Search sx={{ backgroundColor: "2A2B30", display: { xs: 'none', md: 'flex' } }}>
             <SearchIconWrapper>
               <SearchIcon />
             </SearchIconWrapper>
